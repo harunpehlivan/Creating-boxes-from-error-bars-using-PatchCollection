@@ -30,11 +30,8 @@ def make_error_boxes(ax, xdata, ydata, xerror, yerror, facecolor='r',
     # Add collection to axes
     ax.add_collection(pc)
 
-    # Plot errorbars
-    artists = ax.errorbar(xdata, ydata, xerr=xerror, yerr=yerror,
+    return ax.errorbar(xdata, ydata, xerr=xerror, yerr=yerror,
                           fmt='none', ecolor='k')
-
-    return artists
 
 
 # Create figure and axes
